@@ -17,6 +17,8 @@ import SeCC from "../section/second-header/page";
 import Cookie from "@/components/cookie";
 import { isProduction } from "@/lib/info";
 import Feed from "@/section/feedback/index";
+import AccordionNew from "@/section/new-accordion";
+
 import Banners from "@/section/banners";
 // import Cruve from "./cruve";
 // import Anm from "./anm";
@@ -39,9 +41,7 @@ export default function App() {
       <>
         {/* <Banners /> */}
         <div className="flex flex-col h-screen max-w-[2000px] mx-auto">
-          <header className="p-4">
-            <Navbar />
-          </header>
+          <header className="p-4">{/* <Navbar /> */}</header>
           <main className="p-4">
             <GradientHero />
             <GradientCompany />
@@ -49,23 +49,22 @@ export default function App() {
             {/* <SvgCruve /> */}
             {/* <Mask /> */}
             {/* <GradientExploreFeat /> */}
-            {/* <Card /> */}
+            {/* <Card />
             {/* <PricingTables /> */}
             {/* <CardContent /> */}
             {/* <TextScrollGradient /> */}
             {/* <div className=""></div> */}
-            <Comment />
-            <GradientFeature />
+            {/* <Comment /> */}
+            {/* <GradientFeature /> */}
             {/* <Accordion /> */}
             {/* <SeCC /> */}
             {/* <CardContentA /> */}
             {/* <Stats /> */}
+            <AccordionNew />
             {/* <Cookie /> */}
-            <Feed />
+            {/* <Feed /> */}
           </main>
-          <footer className="p-4">
-            <Footer />
-          </footer>
+          <footer className="p-4">{/* <Footer /> */}</footer>
         </div>
         <></>
       </>
