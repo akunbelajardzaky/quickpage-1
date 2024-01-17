@@ -27,7 +27,7 @@ export default function Home() {
   });
 
   return (
-    <div className="max-w-[1800px] justify-center  mx-auto">
+    <div className="max-w-[1100px] justify-center  mx-auto">
       <main ref={container} className={styles.main}>
         {projects.map((project, i) => {
           const targetScale = 1 - (projects.length - i) * 0.05;

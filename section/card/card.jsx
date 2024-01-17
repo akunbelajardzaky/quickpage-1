@@ -45,7 +45,7 @@ const Card = ({
               loop={true}
               style={{ height: 300 }}
             />
-            <div className="justify-center items-center sm:mx-auto md:mx-auto">
+            <div className="justify-center text-white items-center sm:mx-auto md:mx-auto">
               <TextAnimation text="sssssssss" />
               <div className="mt-10">
                 <p>

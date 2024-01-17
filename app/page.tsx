@@ -41,7 +41,9 @@ export default function App() {
       <>
         {/* <Banners /> */}
         <div className="flex flex-col h-screen max-w-[2000px] mx-auto">
-          <header className="p-4">{/* <Navbar /> */}</header>
+          <header className="p-4">
+            <Navbar />{" "}
+          </header>
           <main className="p-4">
             <GradientHero />
             <GradientCompany />
@@ -49,13 +51,13 @@ export default function App() {
             {/* <SvgCruve /> */}
             {/* <Mask /> */}
             {/* <GradientExploreFeat /> */}
-            {/* <Card />
-            {/* <PricingTables /> */}
+            {/* <Card /> */}
+            {/* <PricingTables />
             {/* <CardContent /> */}
             {/* <TextScrollGradient /> */}
             {/* <div className=""></div> */}
-            {/* <Comment /> */}
-            {/* <GradientFeature /> */}
+            {/* <Comment />
+            <GradientFeature /> */}
             {/* <Accordion /> */}
             {/* <SeCC /> */}
             {/* <CardContentA /> */}
