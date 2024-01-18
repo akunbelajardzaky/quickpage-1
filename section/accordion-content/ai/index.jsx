@@ -21,7 +21,7 @@ function AccordionDemo() {
   const menu = accordion();
 
   return (
-    <div className=" ">
+    <div className="p-7">
       <Accordion.Root
         className=""
         type="single"

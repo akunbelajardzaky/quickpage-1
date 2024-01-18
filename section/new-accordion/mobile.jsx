@@ -4,24 +4,29 @@ import React from "react";
 import classNames from "classnames";
 import * as Accordion from "@radix-ui/react-accordion";
 import { Plus } from "@radix-ui/react-icons";
-import { Icons } from "../../../components/icon";
+import { Icons } from "../../components/icon";
 import localFont from "next/font/local";
 import { Typography } from "@/components/typograpy";
 import "./accordion.css";
 import { accordion } from "@/lib/info";
-const FBlack = localFont({
-  src: "../../../public/fonts/Friends-BlackItalic.otf",
-});
-const FNormal = localFont({ src: "../../../public/fonts/Friends-Normal.otf" });
-const FsemiBold = localFont({
-  src: "../../../public/fonts/Friends-SemiBoldItalic.otf",
-});
+// const FBlack = localFont({
+//   src: "../../public/fonts/Friends-BlackItalic.otf",
+// });
+// const FNormal = localFont({ src: "../../public/fonts/Friends-Normal.otf" });
+// const FsemiBold = localFont({
+//   src: "../../public/fonts/Friends-SemiBoldItalic.otf",
+// });
+
+import General from "@/section/accordion-content/general";
+import AI from "@/section/accordion-content/ai";
+import Privacy from "@/section/accordion-content/privacy";
+import Upcomming from "@/section/accordion-content/upcomming";
 
 function AccordionDemo() {
   const menu = accordion();
 
   return (
-    <div className="p-7">
+    <div className=" ">
       <Accordion.Root
         className=""
         type="single"
@@ -35,19 +40,13 @@ function AccordionDemo() {
                 <div className="py-3">
                   <div class="flex gap-x-3 text-start">
                     <Typography className={``} variant="h3">
-                      Data pribadi apa yang Anda kumpulkan tentang pengguna?
+                      General
                     </Typography>
                   </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <Typography variant="body">
-                  Kami mengumpulkan data pribadi yang diperlukan untuk
-                  menyediakan layanan pendidikan kami, seperti nama, email,
-                  nomor telepon, demografi dasar, dan riwayat pendidikan. Kami
-                  mungkin juga mengumpulkan data penggunaan seperti kursus yang
-                  diambil, kemajuan belajar, dan aktivitas di platform kami.
-                </Typography>
+                <General />
               </AccordionContent>
             </AccordionItem>
           </div>
@@ -58,20 +57,13 @@ function AccordionDemo() {
                 <div className="py-3">
                   <div class="flex gap-x-3 text-start">
                     <Typography className={``} variant="h3">
-                      Bagaimana Anda menggunakan data pribadi pengguna?
+                      Privacy
                     </Typography>
                   </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <Typography variant="body">
-                  Kami menggunakan data pengguna untuk menyediakan dan
-                  mempersonalisasi pengalaman belajar, menganalisis penggunaan
-                  platform untuk peningkatan layanan, dan mengirimkan komunikasi
-                  seperti pengingat kursus dan informasi penting lainnya. Kami
-                  tidak akan pernah menjual data pribadi pengguna atau
-                  membagikannya kepada pihak ketiga tanpa izin eksplisit.
-                </Typography>
+                <Privacy />
               </AccordionContent>
             </AccordionItem>
           </div>
@@ -82,18 +74,13 @@ function AccordionDemo() {
                 <div className="py-3">
                   <div class="flex gap-x-3 text-start">
                     <Typography className={``} variant="h3">
-                      Apakah data pengguna dienkripsi?
+                      Responsible AI
                     </Typography>
                   </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <Typography variant="body">
-                  Ya, kami menggunakan enkripsi standar industri untuk
-                  melindungi data pengguna saat transit dan saat istirahat. Kami
-                  juga menerapkan kontrol akses ketat untuk membatasi akses ke
-                  data hanya kepada personel yang membutuhkannya.
-                </Typography>
+                <AI />
               </AccordionContent>
             </AccordionItem>
           </div>
@@ -104,41 +91,13 @@ function AccordionDemo() {
                 <div className="py-3">
                   <div class="flex gap-x-3 text-start">
                     <Typography className={``} variant="h3">
-                      Bisakah pengguna mengakses dan mengontrol data mereka?
+                      Upcoming features
                     </Typography>
                   </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <Typography variant="body">
-                  Ya, pengguna dapat mengakses dan mengedit data pribadi mereka
-                  melalui pengaturan akun mereka. Mereka juga dapat memilih
-                  untuk menghapus data mereka atau menolak komunikasi tertentu
-                  dari kami.
-                </Typography>
-              </AccordionContent>
-            </AccordionItem>
-          </div>
-          {/*  */}
-          <div>
-            <AccordionItem value="item-5">
-              <AccordionTrigger>
-                <div className="py-3">
-                  <div class="flex gap-x-3 text-start">
-                    <Typography className={``} variant="h3">
-                      Apa kebijakan Anda tentang penyimpanan data?
-                    </Typography>
-                  </div>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent>
-                <Typography variant="body">
-                  Kami menyimpan data pengguna selama akun mereka aktif dan
-                  untuk jangka waktu tertentu setelahnya untuk mematuhi
-                  kewajiban hukum atau regulasi. Kami memiliki proses
-                  penghapusan data yang aman untuk memastikan pembuangan data
-                  yang tidak lagi diperlukan.
-                </Typography>
+                <Upcomming />
               </AccordionContent>
             </AccordionItem>
           </div>
