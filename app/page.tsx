@@ -66,7 +66,10 @@ export default function App() {
             {/* <Cookie /> */}
             {/* <Feed /> */}
           </main>
-          <footer className="p-4">{/* <Footer /> */}</footer>
+          <footer className="p-4">
+            {" "}
+            <Footer />{" "}
+          </footer>
         </div>
         <></>
       </>
