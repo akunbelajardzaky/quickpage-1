@@ -26,7 +26,7 @@ function page() {
           <div className="flex items-center justify-around mx-auto ">
             <div className="flex items-center justify-between mx-auto mb-[100px] border  border-gray-800 bg-white w-screen px-5 py-3 rounded-2xl shadow-2xl shadow-zinc-400 hidden md:flex">
               {/* image logo */}
-              <div className="img hidden sm:block lg:block">
+              <div className="img hidden sm:block lg:block ml-2">
                 <Icons.icong />
               </div>
               {/* //nav Items Cross */}

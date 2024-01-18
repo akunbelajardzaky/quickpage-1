@@ -12,6 +12,13 @@ import shopify from "../assets/image/company/shopify.png";
 import spotify from "../assets/image/company/spotify.png";
 import uber from "../assets/image/company/uber.png";
 
+//
+
+import lottieDocs from "@/assets/animation/docs.json";
+import lottieDoor from "@/assets/animation/dorr.json";
+import lottieAstro from "@/assets/animation/docsring.json";
+import lottieCheckDocs from "@/assets/animation/checkdocs.json";
+
 export const isProduction = true;
 
 // This is a site information
@@ -77,6 +84,7 @@ export const accordion = () => {
     {
       id: 1,
       label: "Send assignment",
+      lottie: 3,
       content:
         "Innovative platform facilitating collaboration and exchange of assignments among students from various schools. With a widely accessible assignment upload feature, this application enables students to share projects, assignments, and relevant information with their peers from different schools. Here are some key features that make",
     },
@@ -103,6 +111,8 @@ export const accordion = () => {
 
 export const projects = [
   {
+    // @ts-ignore
+    lottie: lottieDocs,
     title: "Matthias Leidinger",
     description: "Originally hailing from Austria xixixixixi",
     src: "https://res.cloudinary.com/dfnxmrqmt/image/upload/v1702880068/paralax-assets/x8ctsedtpaoyu7ek2eqh.svg",
@@ -110,6 +120,8 @@ export const projects = [
     color: "#7F58AF",
   },
   {
+    // @ts-ignore
+    lottie: lottieDoor,
     title: "Clément Chapillon",
     description:
       "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
@@ -118,6 +130,8 @@ export const projects = [
     color: "#64C5EB",
   },
   {
+    // @ts-ignore
+    lottie: lottieAstro,
     title: "Zissou",
     description:
       "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
@@ -126,6 +140,8 @@ export const projects = [
     color: "#E84D8A",
   },
   {
+    // @ts-ignore
+    lottie: lottieCheckDocs,
     title: "Mathias Svold and Ulrik Hasemann",
     description:
       "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",

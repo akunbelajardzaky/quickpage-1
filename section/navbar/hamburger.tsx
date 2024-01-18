@@ -8,6 +8,7 @@ const App = () => {
   return (
     <div>
       <button
+        title="open nav"
         className="flex flex-col h-12 w-12   rounded justify-end items-end group"
         onClick={() => setIsOpen(!isOpen)}
       >

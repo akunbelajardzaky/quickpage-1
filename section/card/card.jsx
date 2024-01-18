@@ -10,6 +10,7 @@ const Card = ({
   i,
   title,
   description,
+  lottie,
   src,
   url,
   color,
@@ -41,18 +42,14 @@ const Card = ({
           <div className="flex">
             <Lottie
               className="ml-24 hidden sm:block md:block lg:block"
-              animationData={anm}
+              animationData={lottie}
               loop={true}
               style={{ height: 300 }}
             />
             <div className="justify-center text-white items-center sm:mx-auto md:mx-auto">
-              <TextAnimation text="sssssssss" />
+              <TextAnimation text={title} />
               <div className="mt-10">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                  autem ab exercitationem laborum commodi molestias magnam vero
-                  id ipsum debitis?
-                </p>
+                <p>{description}</p>
               </div>
             </div>
           </div>

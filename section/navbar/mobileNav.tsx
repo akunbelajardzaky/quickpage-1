@@ -51,7 +51,7 @@ export default function App() {
   return (
     <div className="-mb-60 -z-0 ">
       <div className="flex justify-between bg-white w-screen  -mt-4 ">
-        <div className="text-red-500 mt-5 -mr-4">
+        <div className="text-red-500 mt-5 ml-3">
           <Icons.icong />
         </div>
         <div className="mr-12">

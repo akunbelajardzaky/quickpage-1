@@ -4,54 +4,76 @@ import * as Tabs from "@radix-ui/react-tabs";
 import classNames from "classnames";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import Akordion from "@/section/accordion";
+import General from "@/section/accordion-content/general";
+import AI from "@/section/accordion-content/ai";
+import Privacy from "@/section/accordion-content/privacy";
+import Upcomming from "@/section/accordion-content/upcomming";
 
 const TabsDemo = () => (
-  <Tabs.Root
-    className="flex mt-48  max-w-[1200px]  gap-x-24 mx-auto  justify-between p-10" // Align tabs to the start
-    defaultValue="tab1"
+  <div
+    className="mt-48  max-w-[1200px]   mx-auto  justify-between p-10" // Align tabs to the start
   >
-    <div>
-      <Tabs.List
-        className="border-mauve6 flex flex-col gap-y-9"
-        aria-label="Manage your account"
-      >
-        {/* Align triggers to the start using text-start */}
-        <Tabs.Trigger
-          className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl "
-          value="tab1"
+    <h1 className="text-3xl font-bold text-gray-700">
+      Frequently asked <br /> questions.
+    </h1>
+    <Tabs.Root
+      className="flex  mt-10 space-x-[50px] justify-between " // Align tabs to the start
+      defaultValue="tab1"
+    >
+      <div>
+        <Tabs.List
+          className="border-mauve6 min-w-[30px] flex flex-col gap-9"
+          aria-label="Manage your account"
         >
-          General
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl"
-          value="tab2"
-        >
-          Privacy
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl "
-          value="tab3"
-        >
-          Responsible AI
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl "
-          value="tab4"
-        >
-          Upcoming features and offerings
-        </Tabs.Trigger>
-      </Tabs.List>
-    </div>
-    <div className="mb-10">
-      <Tabs.Content value="tab1">
-        <Akordion />
-      </Tabs.Content>
-      <Tabs.Content value="tab2">ddwdwdwd </Tabs.Content>
-      <Tabs.Content value="tab3"></Tabs.Content>
-      <Tabs.Content value="tab4">swswsw </Tabs.Content>
-    </div>
-  </Tabs.Root>
+          {/* Align triggers to the start using text-start */}
+          <Tabs.Trigger
+            className="text-start data-[state=active]:bg-gray-200 px-3 py-2 rounded-xl "
+            value="tab1"
+          >
+            General
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl"
+            value="tab2"
+          >
+            Privacy
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl "
+            value="tab3"
+          >
+            Responsible AI
+          </Tabs.Trigger>
+          <Tabs.Trigger
+            className="text-start data-[state=active]:bg-red-500 px-3 py-2 rounded-xl "
+            value="tab4"
+          >
+            Upcoming features
+          </Tabs.Trigger>
+        </Tabs.List>
+      </div>
+      <div className="mb-10 max-w-[800px]">
+        <Tabs.Content value="tab1">
+          <h1 className="text-2xl font-bold text-gray-700">General</h1>
+          <General />
+        </Tabs.Content>
+        <Tabs.Content value="tab2">
+          <h1 className="text-2xl font-bold text-gray-700">Privacy</h1>
+          <Privacy />
+        </Tabs.Content>
+        <Tabs.Content value="tab3">
+          <h1 className="text-2xl font-bold text-gray-700">Responsible AI</h1>
+          <AI />
+        </Tabs.Content>
+        <Tabs.Content value="tab4">
+          <h1 className="text-2xl font-bold text-gray-700">
+            Upcoming features
+          </h1>
+          <Upcomming />
+        </Tabs.Content>
+      </div>
+    </Tabs.Root>
+  </div>
 );
 
 export default TabsDemo;

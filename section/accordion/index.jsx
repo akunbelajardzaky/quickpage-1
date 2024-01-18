@@ -15,7 +15,7 @@ const FsemiBold = localFont({
   src: "../../public/fonts/Friends-SemiBoldItalic.otf",
 });
 
-function AccordionDemo() {
+function AccordionDemo({ title, content }) {
   const menu = accordion();
 
   return (
@@ -31,20 +31,15 @@ function AccordionDemo() {
             <AccordionItem value="item-1">
               <AccordionTrigger>
                 <div className="py-3">
-                  <div class="">
-                    <Typography className={``} variant="h1">
-                      {menu[0].id}
-                    </Typography>
+                  <div class="flex gap-x-3 text-center">
                     <Typography className={``} variant="h3">
-                      {menu[0].label}
+                      {title}
                     </Typography>
                   </div>
                 </div>
               </AccordionTrigger>
               <AccordionContent>
-                <Typography className={``} variant="body">
-                  {menu[0].content}
-                </Typography>
+                <Typography variant="body">{content}</Typography>
               </AccordionContent>
             </AccordionItem>
           </div>
@@ -57,7 +52,10 @@ function AccordionDemo() {
 const AccordionItem = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => (
     <Accordion.Item
-      className={classNames(className)}
+      className={classNames(
+        "justify-start min-w-[900px] max-w-[900px]",
+        className
+      )}
       {...props}
       ref={forwardedRef}
     >
@@ -68,16 +66,17 @@ const AccordionItem = React.forwardRef(
 
 const AccordionTrigger = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => (
-    <Accordion.Header className="flex">
+    <Accordion.Header className="">
       <Accordion.Trigger
-        className={classNames(" ", className)}
+        className={classNames(
+          "flex justify-center items-center gap-x-2",
+          className
+        )}
         {...props}
         ref={forwardedRef}
       >
         {children}
-        <div>
-          <Icons.Plus aria-hidden />
-        </div>
+        <Icons.Plus aria-hidden />
       </Accordion.Trigger>
     </Accordion.Header>
   )
@@ -87,7 +86,7 @@ const AccordionContent = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => (
     <Accordion.Content
       className={classNames(
-        " data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp  overflow-hidden ",
+        "text-mauve11  data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px]",
         className
       )}
       {...props}

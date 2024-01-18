@@ -17,7 +17,7 @@ import SeCC from "../section/second-header/page";
 import Cookie from "@/components/cookie";
 import { isProduction } from "@/lib/info";
 import Feed from "@/section/feedback/index";
-import AccordionNew from "@/section/new-accordion";
+import AccordionNew from "@/section/accordion-final";
 
 import Banners from "@/section/banners";
 // import Cruve from "./cruve";
@@ -51,17 +51,17 @@ export default function App() {
             {/* <SvgCruve /> */}
             {/* <Mask /> */}
             {/* <GradientExploreFeat /> */}
-            {/* <Card /> */}
             {/* <PricingTables />
             {/* <CardContent /> */}
             {/* <TextScrollGradient /> */}
             {/* <div className=""></div> */}
-            {/* <Comment />
-            <GradientFeature /> */}
+            <Comment />
+            <GradientFeature />
             {/* <Accordion /> */}
             {/* <SeCC /> */}
             {/* <CardContentA /> */}
             {/* <Stats /> */}
+            <Card />
             <AccordionNew />
             {/* <Cookie /> */}
             {/* <Feed /> */}
