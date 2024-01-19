@@ -6,7 +6,7 @@ function index() {
   return (
     <div>
       <>
-        <div className="lg:hidden mt-24">
+        <div className="lg:hidden mt-24 ">
           <AccordionMobile />
         </div>
         <div className="hidden flex-col lg:flex">

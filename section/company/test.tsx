@@ -8,7 +8,7 @@ import Icon from "../icon/index";
 
 function Index() {
   return (
-    <div className="mt-16 min-w-[2000px] mx-auto">
+    <div className="mt-16 max-w-[2000px] mx-auto">
       <div className=" flex-col -space-y-3">
         <Marquee direction="left" className="space-x-5 flex">
           {company.map((companys, i) => {

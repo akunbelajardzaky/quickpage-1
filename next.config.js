@@ -1,8 +1,22 @@
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output: 'export',
+//   images: {
+//     loader: 'custom',
+//     loaderFile: './my-loader.ts',
+//     domains: ["res.cloudinary.com"],
+//   },
+// };
+
+// module.exports = nextConfig;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
-    domains: ["res.cloudinary.com"],
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
   },
-};
-
-module.exports = nextConfig;
+}
+ 
+module.exports = nextConfig

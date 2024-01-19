@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
+
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -27,7 +29,7 @@
     "framer-motion": "^10.16.16",
     "jsonfile": "^6.1.0",
     "lottie-react": "^2.4.0",
-    "next": "14.0.4",
+    "next": "13.5.4",
     "next-cloudinary": "^5.16.0",
     "next-themes": "^0.2.1",
     "react": "^18",
